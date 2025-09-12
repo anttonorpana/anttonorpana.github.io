@@ -43,11 +43,24 @@
             display:block;
             margin: 10px auto;
         }
-        /* Container-div, keskittää sisällön flexboxilla*/
+        /* "äiti"-container molemmille laatikoille, jotta ne näkyisivät vierekkäin, koska tämä asettelee ne.*/
+        .content {
+            display:flex;
+            justify-content: center;
+            align-items:flex-start;
+            gap: 50px;
+
+        }
+        /* Container-div, keskittää sisällön flexboxilla, margin siirtää oikealle että pysyy keskellä*/
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-left: 250px;
+        }
+        /* Sivuun laitettava laatikko, ei kaipaa muuta määrittelyä kuin marginaalin ylhäältä jotta on noin keskellä toista laatikkoa*/
+        .sivu {
+            margin-top: 150px;
         }
         /* Box-div, varsinainen valkoinen laatikko sivulla. taustanväri, reuna, ja varjo*/
         .box {
@@ -76,18 +89,24 @@
     <p class="korostus">Tää mies</p>
     <p>tässä</p>
     </div>
-    <!-- Laatikon container-->
+    <div class="content">
+    <!-- Päälaatikon container-->
     <div class="container">
         <!-- itse laatikko ja sen sisältö-->
         <div class="box">
         <img src="him.jpg" alt="Kuva allekirjoittaneesta" class="kuva">
-        <h2> Parhaat jutut on</h2>
-        <ul>
-            <li>Syöminen</li>
-            <li>Nukkuminen</li>
-            <li>Muu</li>
-         </ul>
      </div>
+    </div>
+    <div class ="sivu">
+        <div class="box">
+            <h2> Parhaat jutut on</h2>
+            <ul>
+                <li>Syöminen</li>
+                <li>Nukkuminen</li>
+                <li>Muu</li>
+            </ul>
+        </div>
+    </div>
     </div>
     <!-- Linkki loppuun -->
     <p class="linkki"><a href="https://www.mobiusdigitalgames.com/outer-wilds.html" target="_blank">Ps. Pelaa Outer Wilds</a></p>
