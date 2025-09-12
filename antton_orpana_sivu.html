@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Antton Orpana Site</title>
+    <!-- tyylimäärittelyt -->
+    <style>
+        /* Pääsisällön taustaväri, fontti, marginaalit*/
+        body {
+            background-color:aqua;
+            font-family: Impact;
+            margin: 30px;
+            padding: 30px;
+        }
+        /* Otsikko ID-valitsimella (vain yksi koko sivulla), väri, keskitys, marginaali yläreunasta*/
+        #otsikko {
+            color: purple;
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Luokkavalitsin (class=jtn). Punainen, isompi, keskitetty teksti */
+        .korostus {
+            color: red;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        /* Otsikko 2-tyyli, random väri */
+        h2 {
+            color:forestgreen;
+        }
+        /* Kappaleiden marginaalit ja padding (jää tilaa muihin elementteihin) */
+        p {
+            text-align: center;
+            margin: 10px;
+            padding: 5px;
+        }
+        /* Kuvalle luokka: skaalaa leveyden mukaan (pituus automaattisesti), display:block esittää kuvan uuden <p> mukaan omalla rivillään, marginaalit*/
+        .kuva {
+            width: 300px;
+            height: auto;
+            display:block;
+            margin: 10px auto;
+        }
+        /* Container-div, keskittää sisällön flexboxilla*/
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Box-div, varsinainen valkoinen laatikko sivulla. taustanväri, reuna, ja varjo*/
+        .box {
+            background-color: white;
+            border: 4px solid black;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 20px 20px 20px rgba(0,0,0,1); /* rgb-arvo + transparency, pikselit määrittelevät suuntaa jne*/
+        }
+        /* linkille kskitys, hieman marginaalia, italics, eri fontti jne*/
+        .linkki {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            font-family: 'Lucida Sans';
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Pääotsikko, normaali paragraph korostettuna-->
+    <div>
+    <h1 id="otsikko"> Antton Orpana extravaganza</h1>
+    <p>Eli siis</p>
+    <p class="korostus">Tää mies</p>
+    <p>tässä</p>
+    </div>
+    <!-- Laatikon container-->
+    <div class="container">
+        <!-- itse laatikko ja sen sisältö-->
+        <div class="box">
+        <img src="him.jpg" alt="Kuva allekirjoittaneesta" class="kuva">
+        <h2> Parhaat jutut on</h2>
+        <ul>
+            <li>Syöminen</li>
+            <li>Nukkuminen</li>
+            <li>Muu</li>
+         </ul>
+     </div>
+    </div>
+    <!-- Linkki loppuun -->
+    <p class="linkki"><a href="https://www.mobiusdigitalgames.com/outer-wilds.html" target="_blank">Ps. Pelaa Outer Wilds</a></p>
+</body>
+
+</html>
