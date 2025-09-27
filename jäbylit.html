@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ryhmärämä</title>
     <!-- tyylimäärittelyt -->
     <style>
@@ -48,12 +49,14 @@
             display:flex;
             justify-content: center;
             align-items:flex-start;
+            flex-wrap: wrap;
             gap: 50px;
 
         }
         /* Container-div, keskittää sisällön flexboxilla, margin siirtää oikealle että pysyy keskellä*/
         .container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: stretch;
             margin: auto;
@@ -70,6 +73,7 @@
             border-radius: 8px;
             text-align: center;
             box-shadow: 20px 20px 20px rgba(0,0,0,1); /* rgb-arvo + transparency, pikselit määrittelevät suuntaa jne*/
+            box-sizing: border-box;
         }
         /* linkille kskitys, hieman marginaalia, italics, eri fontti jne*/
         .linkki {
@@ -78,6 +82,21 @@
             font-style: italic;
             font-family: 'Lucida Sans';
         }
+
+        @media (max-width: 600px) {
+    body {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .kuva {
+        max-width: 100%;
+    }
+}
     </style>
 </head>
 
