@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ryhmärämä</title>
+    <!-- tyylimäärittelyt -->
+    <style>
+        /* Pääsisällön taustaväri, fontti, marginaalit*/
+        body {
+            background-color:aqua;
+            font-family: Impact;
+            margin: 30px;
+            padding: 30px;
+        }
+        /* Otsikko ID-valitsimella (vain yksi koko sivulla), väri, keskitys, marginaali yläreunasta*/
+        #otsikko {
+            color: purple;
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Luokkavalitsin (class=jtn). Punainen, isompi, keskitetty teksti */
+        .korostus {
+            color: red;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        /* Otsikko 2-tyyli, random väri */
+        h2 {
+            color:forestgreen;
+        }
+        /* Kappaleiden marginaalit ja padding (jää tilaa muihin elementteihin) */
+        p {
+            text-align: center;
+            margin: 10px;
+            padding: 5px;
+        }
+        /* Kuvalle luokka: skaalaa leveyden mukaan (pituus automaattisesti), display:block esittää kuvan uuden <p> mukaan omalla rivillään, marginaalit*/
+        .kuva {
+            width: 250px;
+            height: auto;
+            display:block;
+            margin: 10px auto;
+        }
+        /* "äiti"-container molemmille laatikoille, jotta ne näkyisivät vierekkäin, koska tämä asettelee ne.*/
+        .content {
+            display:flex;
+            justify-content: center;
+            align-items:flex-start;
+            gap: 50px;
+
+        }
+        /* Container-div, keskittää sisällön flexboxilla, margin siirtää oikealle että pysyy keskellä*/
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        /* Sivuun laitettava laatikko, ei kaipaa muuta määrittelyä kuin marginaalin ylhäältä jotta on noin keskellä toista laatikkoa*/
+        .sivu {
+            margin-top: 150px;
+        }
+        /* Box-div, varsinainen valkoinen laatikko sivulla. taustanväri, reuna, ja varjo*/
+        .box {
+            background-color: white;
+            border: 4px solid black;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 20px 20px 20px rgba(0,0,0,1); /* rgb-arvo + transparency, pikselit määrittelevät suuntaa jne*/
+        }
+        /* linkille kskitys, hieman marginaalia, italics, eri fontti jne*/
+        .linkki {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            font-family: 'Lucida Sans';
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Pääotsikko, normaali paragraph korostettuna-->
+    <div>
+    <h1 id="otsikko"> Tässä ois tää ryhmä</h1>
+    <p>Eli siis</p>
+    <p class="korostus">Iron IV</p>
+    <p>-ryhmä</p>
+    </div>
+    <div class="content">
+    <!-- Päälaatikon container-->
+    <div class="container">
+        <!-- itse laatikko ja sen sisältö-->
+        <div class="box">
+        <img src="him2.png" alt="Kuva Antton Orpanasta" class="kuva">
+        <p>Antton Orpana</p>
+     </div>
+    <div class="box">
+        <img src="dimmadome.png" alt="Kuva Tuukasta" class="kuva">
+        <p>Tuukka Santanen</p>
+    </div>
+    <div class="box">
+        <img src="kimo2.png" alt="Kuva Nikosta" class="kuva">
+        <p>Niko Karhu</p>
+    </div>
+    <div class="box">
+        <img src="chad2.jpg" alt="Kuva Aarosta" class="kuva">
+        <p>Aaro Nieminen</p>
+    </div>
+    <div class="box">
+        <img src="him2.jpg" alt="Kuva Ilmarista" class="kuva">
+        <p>Ilmari Takkunen</p>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
